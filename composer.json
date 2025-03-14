@@ -1,0 +1,14 @@
+{
+    "name": "adems/adems-dapur",
+    "description": "Dapur AdeMS untuk bermain dan belajar membuat website",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "adems",
+        "dapur"
+    ],
+    "homepage": "https://www.adems.id",
+    "require": {
+        "php": "~8.1.0 || ~8.2.0 || ~8.3.0"
+    }
+}
