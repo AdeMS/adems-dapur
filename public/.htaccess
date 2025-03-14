@@ -1,0 +1,24 @@
+# Disable server signature start
+ServerSignature Off
+
+<IfModule mod_negotiation.c>
+    Options -MultiViews -Indexes
+    Options +FollowSymlinks
+</IfModule>
+
+# if rewrite enabled
+<IfModule mod_rewrite.c>
+    # Turn rewrite engine on
+    RewriteEngine On
+
+    # Redirects http request to https request
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# if rewrite disabled
+<IfModule !mod_rewrite.c>
+    # If we don't have mod_rewrite installed, all 404's
+    # can be sent to index.php, and everything works as normal.
+    ErrorDocument 404 index.php
+</IfModule>
