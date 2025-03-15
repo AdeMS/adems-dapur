@@ -61,7 +61,7 @@
                 "prompt": "Would you like to install JSON de/serialization support?"
             },
             {
-                "name": "laminas/laminas-log",
+                "name": "adems/adems-log",
                 "constraint": "^2.17.0",
                 "prompt": "Would you like to install logging support?",
                 "module": true
