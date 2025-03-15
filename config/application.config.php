@@ -5,6 +5,7 @@ declare(strict_types=1);
 return [
     // Retrieve list of modules used in this application.
     'modules' => require __DIR__ . '/application.modules.php',
+    
     // These are various options for the listeners attached to the ModuleManager
     'module_listener_options' => [
         // use composer autoloader instead of laminas-loader
