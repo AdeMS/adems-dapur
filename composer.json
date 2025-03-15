@@ -62,7 +62,7 @@
             },
             {
                 "name": "adems/adems-log",
-                "constraint": "^2.17.0",
+                "constraint": "^2.18.0",
                 "prompt": "Would you like to install logging support?",
                 "module": true
             },
