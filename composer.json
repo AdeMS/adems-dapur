@@ -5,7 +5,8 @@
     "license": "BSD-3-Clause",
     "keywords": [
         "adems",
-        "dapur"
+        "dapur",
+        "framework"
     ],
     "homepage": "https://www.adems.id",
     "require": {
