@@ -1,0 +1,73 @@
+/*!
+ * CSS stylesheet for Dapur AdeMS
+ * Tempat Ade M Saragih untuk bermain dan belajar membuat website.
+ */
+
+[data-bs-theme=dapur] {
+    --bs-dark: #00221c;
+    --bs-dark-rgb: 0, 34, 28;
+    --bs-link-color: #0a5700;
+    --bs-link-color-rgb: 10, 87, 0;
+    --bs-link-decoration: underline;
+    --bs-link-hover-color: #009655;
+    --bs-link-hover-color-rgb: 0, 150, 85;
+    --bs-link-hover-decoration: none;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+
+/**
+ * No media query for `xs` since this is the default in Bootstrap,
+ * where "mobile first" method applied.
+ */
+body {
+    background-attachment: fixed;
+    background-image: url('/asset/dapur/img/bg-image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}            
+
+a {
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    text-decoration: var(--bs-link-decoration);
+}
+a:hover {
+    text-decoration: var(--bs-link-hover-decoration);
+}
+
+
+.jumbotron {
+    padding: 3rem !important;
+    margin-bottom: 1.5rem !important;
+    background-color: rgba(var(--bs-light-rgb), 0.90 ) !important;
+    border-radius: var(--bs-border-radius) !important;
+}
+
+.opacity-90 {
+    opacity: 0.90;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+}
