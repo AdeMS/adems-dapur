@@ -6,10 +6,11 @@
     "keywords": [
         "dapur",
         "adems",
-        "html",
-        "bootstrap",
-        "stylesheet",
-        "css"
+        "php",
+        "html5"
     ],
-    "homepage": "https://www.adems.id"
+    "homepage": "https://www.adems.id",
+    "require": {
+        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
+    }
 }
