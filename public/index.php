@@ -17,8 +17,8 @@ $headMeta = [
 <? endforeach ?>
         <title><?=$headTitle;?></title>
         <link href="/asset/adems/img/favicon.ico" rel="shortcut icon" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+        <link href="/asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/asset/bootstrap/font/bootstrap-icons.min.css" rel="stylesheet">
         <link href="/asset/dapur/css/style.css" rel="stylesheet">
     </head>
     <body class="d-flex flex-column h-100">
@@ -61,6 +61,6 @@ $headMeta = [
             </div>
         </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+        <script src="/asset/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     </body>
 </html>
