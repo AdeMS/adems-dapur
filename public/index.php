@@ -1,9 +1,21 @@
+<?php
+$headTitle = "Beranda - Dapur AdeMS";
+$headMeta = [
+    "description" => "Tempat Ade M Saragih untuk belajar dan bermain membuat website",
+    "keywords"    => "dapur adems, tempat adems, adems, belajar dan bermain, belajar membuat website",
+    "author"      => "Ade M Saragih",
+];
+
+?>
 <!DOCTYPE html>
 <html lang="id" class="h-100" data-bs-theme="dapur">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Beranda - Dapur AdeMS</title>
+<? foreach($headMeta as $name => $content): ?>
+        <meta name="<?=$name;?>" content="<?=$content;?>" />
+<? endforeach ?>
+        <title><?=$headTitle;?></title>
         <link href="/asset/adems/img/favicon.ico" rel="shortcut icon" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
