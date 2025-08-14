@@ -11,12 +11,23 @@
     ],
     "homepage": "https://www.adems.id",
     "require": {
-        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
+        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
+        "twbs/bootstrap": "^5.3"
     },
     "scripts": {
+        "post-create-project-cmd": [
+            "@setup-bootstrap"
+        ],
+        "post-update-cmd": [
+            "@setup-bootstrap"
+        ],
         "serve": [
           "Composer\\Config::disableProcessTimeout",
           "php -S 0.0.0.0:8080 -t public/"
+        ],
+        "setup-bootstrap": [
+            "php -r 'if (is_dir(\"public/asset/bootstrap\")) unlink(\"public/asset/bootstrap\");'",
+            "cp -R vendor/twbs/bootstrap/dist public/asset/bootstrap"
         ]
     }
 }
