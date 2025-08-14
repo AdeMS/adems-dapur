@@ -28,8 +28,10 @@ $headMeta = [
                     <a class="navbar-brand py-0" href="https://github.com/adems/adems-dapur">
                         <img src="/asset/dapur/img/brand-logo.png" alt="Dapur AdeMS" height="40" />
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon top-bar"></span>
+                        <span class="toggler-icon middle-bar"></span>
+                        <span class="toggler-icon bottom-bar"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
