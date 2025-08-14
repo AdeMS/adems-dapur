@@ -7,7 +7,9 @@
         "dapur",
         "adems",
         "html",
-        "bootstrap"
+        "bootstrap",
+        "stylesheet",
+        "css"
     ],
     "homepage": "https://www.adems.id"
 }
