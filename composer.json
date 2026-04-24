@@ -7,18 +7,21 @@
         "dapur",
         "adems",
         "php",
-        "html5"
+        "html5",
+        "laminas"
     ],
     "homepage": "https://www.adems.id",
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "composer/package-versions-deprecated": true
+            "composer/package-versions-deprecated": true,
+            "laminas/laminas-component-installer": true
         }
     },
     "require": {
         "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
         "composer/package-versions-deprecated": "^1.11.99.5",
+        "laminas/laminas-component-installer": "^2.6 || ^3.5",
         "twbs/bootstrap": "^5.3",
         "twbs/bootstrap-icons": "^1.13.1"
     },
