@@ -20,3 +20,4 @@ ServerSignature Off
 </IfModule>
 
 SetEnv DAPUR_ENV "development"
+#SetEnv DAPUR_ROOT "/www/public"
