@@ -1,6 +1,6 @@
 {
     "name": "adems/adems-dapur",
-    "description": "Dapur AdeMS, tempat Ade M Saragih untuk memulai bermain dan belajar membuat website",
+    "description": "Dapur AdeMS, tempat Ade M Saragih untuk memulai bermain dan belajar membuat website menggunakan laminas mezzio",
     "type": "project",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -8,7 +8,13 @@
         "adems",
         "php",
         "html5",
-        "laminas"
+        "laminas",
+        "mezzio",
+        "middleware",
+        "psr",
+        "psr-7",
+        "psr-11",
+        "psr-15"
     ],
     "homepage": "https://www.adems.id",
     "config": {
@@ -24,6 +30,12 @@
         "laminas/laminas-component-installer": "^2.6 || ^3.5",
         "laminas/laminas-config-aggregator": "^1.18",
         "laminas/laminas-servicemanager": "^3.22",
+        "laminas/laminas-diactoros": "^3.8.0",
+        "laminas/laminas-stdlib": "^3.21",
+        "mezzio/mezzio": "^3.23.1",
+        "mezzio/mezzio-helpers": "^5.20",
+        "mezzio/mezzio-laminasrouter": "^3.9.0",
+        "mezzio/mezzio-laminasviewrenderer": "^2.15",
         "twbs/bootstrap": "^5.3",
         "twbs/bootstrap-icons": "^1.13.1"
     },

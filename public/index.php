@@ -34,4 +34,39 @@ require getcwd() . '/vendor/autoload.php';
      * @var \Psr\Container\ContainerInterface $container 
     */
     $container = require 'config/container.php';
+
+    /** 
+     * Mengambil instance aplikasi Mezzio dari container menggunakan kunci \Mezzio\Application::class
+     * dan menyimpannya dalam variabel $app. Aplikasi ini akan digunakan untuk mengkonfigurasi
+     * middleware, routing, dan menjalankan aplikasi.
+     * 
+     * @var \Mezzio\Application $dapur 
+    */
+    $dapur = $container->get(\Mezzio\Application::class);
+
+    /** 
+     * Mengambil instance MiddlewareFactory dari container menggunakan kunci \Mezzio\MiddlewareFactory::class
+     * dan menyimpannya dalam variabel $factory. MiddlewareFactory ini akan digunakan untuk membuat
+     * instance middleware yang diperlukan dalam pipeline aplikasi.
+     * 
+     * @var \Mezzio\MiddlewareFactory $factory 
+    */
+    $factory = $container->get(\Mezzio\MiddlewareFactory::class);
+
+    /**
+     * Menjalankan konfigurasi pipeline dan routing aplikasi dengan memanggil file config/pipeline.php
+     * dan config/routes.php, serta menyuntikkan $dapur, $factory,
+     * dan $container sebagai argumen. File-file ini akan berisi konfigurasi untuk middleware dan routing aplikasi,
+     * yang akan menentukan bagaimana aplikasi merespons permintaan HTTP yang masuk. Dengan memis
+     * kan konfigurasi ini ke dalam file terpisah, kita dapat menjaga kode tetap modular dan mudah dikelola.
+     */
+    (require 'config/pipeline.php')($dapur, $factory, $container);
+    (require 'config/routes.php')($dapur, $factory, $container);
+
+    /**
+     * Menjalankan aplikasi dengan memanggil metode run() pada instance $dapur. 
+     * Ini akan memulai loop aplikasi dan mulai menerima serta merespons permintaan HTTP yang masuk
+     * sesuai dengan konfigurasi middleware dan routing yang telah ditentukan sebelumnya.
+     */
+    $dapur->run();
 })();
