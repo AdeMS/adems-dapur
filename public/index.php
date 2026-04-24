@@ -22,3 +22,16 @@ chdir($_SERVER['DAPUR_ROOT'] ?? dirname(__DIR__));
  * dan autoloading kelas.
  */
 require getcwd() . '/vendor/autoload.php';
+
+(function() {
+    /** 
+     * Memuat konfigurasi container dependency injection dari file config/container.php 
+     * dan menyimpannya dalam variabel $container. Container ini akan digunakan untuk
+     * mengelola dan menyuntikkan dependensi ke dalam aplikasi, seperti layanan, middleware,
+     * dan komponen lainnya. Dengan menggunakan container, kita dapat mengatur dependensi dengan lebih mudah
+     * dan menjaga kode tetap bersih dan terorganisir. 
+     * 
+     * @var \Psr\Container\ContainerInterface $container 
+    */
+    $container = require 'config/container.php';
+})();
