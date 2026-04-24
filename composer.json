@@ -11,10 +11,14 @@
     ],
     "homepage": "https://www.adems.id",
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
     },
     "require": {
         "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
+        "composer/package-versions-deprecated": "^1.11.99.5",
         "twbs/bootstrap": "^5.3",
         "twbs/bootstrap-icons": "^1.13.1"
     },
