@@ -16,3 +16,9 @@ if ($_SERVER['DAPUR_ENV'] === 'development') {
  * yang ditentukan oleh variabel lingkungan DAPUR_ROOT, atau ke direktori induk
  */
 chdir($_SERVER['DAPUR_ROOT'] ?? dirname(__DIR__));
+
+/**
+ * Memuat autoloader yang dihasilkan oleh Composer untuk mengelola dependensi 
+ * dan autoloading kelas.
+ */
+require getcwd() . '/vendor/autoload.php';
