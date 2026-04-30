@@ -43,6 +43,7 @@ class ConfigProvider
         return [
             'paths' => [
                 'error'  => [dirname(__DIR__) . '/templates/error'],
+                'layout' => [dirname(__DIR__) . '/templates/layout'],
             ],
         ];
     }
