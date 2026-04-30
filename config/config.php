@@ -9,6 +9,8 @@ $aggregator = new ConfigAggregator([
     \Mezzio\ConfigProvider::class,
     \Mezzio\Router\ConfigProvider::class,
     \Laminas\Diactoros\ConfigProvider::class,
+
+    Dapur\ConfigProvider::class,
 ]);
 
 return $aggregator->getMergedConfig();
