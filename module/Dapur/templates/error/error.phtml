@@ -1,0 +1,11 @@
+<?php $this->headTitle(sprintf('%d %s', $this->status, $this->reason)); ?>
+
+<h1>Waduh!</h1>
+<h2>Mangap Gaes.</h2>
+<p>Ketemunya pesan error <?=$this->escapeHtml(sprintf('%d %s', $this->status, $this->reason))?>.</p>
+<?php if ($this->status == 404) : ?>
+    <p>
+        Ente sepertinya nyari sesuatu yang gak ada atau mungkin sudah dipindahkan. Coba cek salah satu link di halaman ini
+        atau kembali ke <a href="<?=$this->url('home')?>">Home</a>.
+    </p>
+<?php endif; ?>
