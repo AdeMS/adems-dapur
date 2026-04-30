@@ -1,0 +1,103 @@
+<?php
+$this->headTitle('Dapur AdeMS')
+    ->setSeparator(' - ')
+    ->setAutoEscape(false);
+
+$this->headMeta()
+    ->setName('description', 'Tempat Ade M Saragih untuk belajar dan bermain membuat website')
+    ->setName('keywords', 'dapur adems, tempat adems, adems, belajar dan bermain, belajar membuat website')
+    ->setName('author', 'Ade M Saragih')
+    ->setSeparator("\n\t")
+    ->setAutoEscape(false);
+
+$this->headLink()
+    ->prependStylesheet('/asset/dapur/css/style.css')
+    ->prependStylesheet('/asset/bootstrap/font/bootstrap-icons.min.css')
+    ->prependStylesheet('/asset/bootstrap/css/bootstrap.min.css')
+    ->setSeparator("\n\t")
+    ->setAutoEscape(false);
+
+$this->headScript()
+    ->setSeparator("\n\t")
+    ->setAutoEscape(false);
+
+$this->inlineScript()
+    ->prependFile('/asset/bootstrap/js/bootstrap.bundle.min.js')
+    ->setSeparator("\n\t")
+    ->setAutoEscape(false);
+?>
+<!DOCTYPE html>
+<html lang="id" class="h-100" data-bs-theme="dapur">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="shortcut icon" href="/asset/adems/img/favicon.ico" />
+    <?=$this->headTitle()?>
+
+    <?=$this->headMeta()?>
+    
+    <?=$this->headLink()?>
+
+</head>
+<body class="d-flex flex-column h-100">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/asset/dapur/img/brand-logo.png" alt="Dapur AdeMS" height="40" />
+                </a>
+                <button class="navbar-toggler d-flex d-lg-none flex-column justify-content-around collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon top-bar"></span>
+                    <span class="toggler-icon middle-bar"></span>
+                    <span class="toggler-icon bottom-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 500px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="bi bi-house-heart"></i>
+                                Beranda
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">
+                                Disabled
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                        <button class="btn btn-outline-success" type="submit">Cari</button>
+                    </form>
+                </div>
+            </div>
+            </nav>
+    </header>
+
+    <main class="flex-shrink-0 mt-5 pt-4">
+        <div class="container">
+            <?=$this->content?>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+        <div class="container">
+            <span class="text-body-secondary">Hak cipta &copy;<?= date('Y') ?> <a href="https://www.adems.id/" class="fw-bold text-decoration-none">Tempat AdeMS</a> untuk bermain dan belajar.</span>
+        </div>
+    </footer>
+
+    <?=$this->inlineScript()?>
+</body>
+</html>
