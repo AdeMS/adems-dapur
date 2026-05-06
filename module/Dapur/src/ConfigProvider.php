@@ -30,7 +30,7 @@ class ConfigProvider
                 
             ],
             'factories'  => [
-
+                Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
             ],
         ];
     }
@@ -42,6 +42,7 @@ class ConfigProvider
     {
         return [
             'paths' => [
+                'dapur'  => [dirname(__DIR__) . '/templates/dapur'],
                 'error'  => [dirname(__DIR__) . '/templates/error'],
                 'layout' => [dirname(__DIR__) . '/templates/layout'],
             ],
