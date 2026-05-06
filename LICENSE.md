@@ -1,5 +1,3 @@
-BSD 3-Clause License
-
 Copyright (c) 2000 Tempat AdeMS, tempat Ade M Saragih untuk bermain dan belajar.
 Copyright (c) 2020 Laminas Project a Series of LF Projects, LLC.
 
