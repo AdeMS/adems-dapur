@@ -8,4 +8,5 @@ use Psr\Container\ContainerInterface;
 
 return static function(Application $dapur, MiddlewareFactory $factory, ContainerInterface $container): void {
     // Register routes here with $app->get(), $app->post(), etc.
+    $dapur->get('/', Dapur\Handler\HomePageHandler::class, 'home');
 };
