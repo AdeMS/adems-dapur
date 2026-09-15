@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Menampilkan semua pesan error di lingkungan pengembangan, 
- * tetapi menyembunyikannya di lingkungan produksi.
+ * tetapi menyembunyikannya di lingkungan lain sperti lingkungan produksi.
  */
 if ($_SERVER['DAPUR_ENV'] === 'development') {
     error_reporting(E_ALL);
@@ -23,7 +23,7 @@ chdir($_SERVER['DAPUR_ROOT'] ?? dirname(__DIR__));
  * Memuat autoloader yang dihasilkan oleh Composer untuk mengelola dependensi 
  * dan autoloading kelas.
  */
-require '/vendor/autoload.php';
+require 'vendor/autoload.php';
 
 (function() {
     /** 
@@ -35,7 +35,7 @@ require '/vendor/autoload.php';
      * 
      * @var \Psr\Container\ContainerInterface $container 
     */
-    $container = require 'config/container.php';
+    $container = require 'container/loader.php';
 
     /** 
      * Mengambil instance aplikasi Mezzio dari container menggunakan kunci \Mezzio\Application::class
@@ -62,8 +62,8 @@ require '/vendor/autoload.php';
      * yang akan menentukan bagaimana aplikasi merespons permintaan HTTP yang masuk. Dengan memis
      * kan konfigurasi ini ke dalam file terpisah, kita dapat menjaga kode tetap modular dan mudah dikelola.
      */
-    (require 'config/pipeline.php')($dapur, $factory, $container);
-    (require 'config/routes.php')($dapur, $factory, $container);
+    (require 'container/pipeline.php')($dapur, $factory, $container);
+    (require 'container/routes.php')($dapur, $factory, $container);
 
     /**
      * Menjalankan aplikasi dengan memanggil metode run() pada instance $dapur. 
