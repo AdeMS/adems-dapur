@@ -1,0 +1,56 @@
+<?php
+$this->headTitle('Tempat AdeMS')
+    ->setSeparator(' - ')
+    ->setAutoEscape(false);
+
+$this->headMeta()
+    ->setName('description', 'Tempat AdeMS untuk belajar, bermain, dan membuat website.')
+    ->setName('keywords', 'tempat adems, adems, belajar, bermain, website')
+    ->setName('author', 'Ade M Saragih')
+    ->setSeparator("\n\t")
+    ->setAutoEscape(false);
+
+$this->headLink()
+    ->prependStylesheet('/asset/dapur/css/style.css')
+    ->prependStylesheet('/asset/bootstrap/font/bootstrap-icons.min.css')
+    ->prependStylesheet('/asset/bootstrap/css/bootstrap.min.css')
+    ->setSeparator("\n\t")
+    ->setAutoEscape(false);
+
+$this->headScript()
+    ->setSeparator("\n\t")
+    ->setAutoEscape(false);
+
+$this->inlineScript()
+    ->prependFile('/asset/bootstrap/js/bootstrap.bundle.min.js')
+    ->setSeparator("\n\t")
+    ->setAutoEscape(false);
+?>
+<!DOCTYPE html>
+<html lang="id" class="h-100" data-bs-theme="dapur">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="shortcut icon" href="/asset/adems/img/favicon.ico" />
+    <?=$this->headTitle()?>
+
+    <?=$this->headMeta()?>
+    
+    <?=$this->headLink()?>
+
+</head>
+<body class="welcome-page">
+    <main class="welcome-main d-flex align-items-center justify-content-center">
+        <?=$this->content?>
+    </main>
+
+    <footer class="welcome-footer py-3 bg-body-tertiary">
+        <div class="container text-center small text-body-secondary">
+            Hak cipta &copy;<?= date('Y') ?> <a href="https://www.adems.id/">Tempat AdeMS</a>, untuk bermain dan belajar.
+        </div>
+    </footer>
+
+    <?=$this->inlineScript()?>
+</body>
+</html>

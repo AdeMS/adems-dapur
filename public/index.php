@@ -14,6 +14,8 @@ if ($_SERVER['DAPUR_ENV'] === 'development') {
 /**
  * Mengubah direktori kerja saat ini ke direktori root proyek,
  * yang ditentukan oleh variabel lingkungan DAPUR_ROOT, atau ke direktori induk
+ * jika DAPUR_ROOT tidak ditentukan. Hal ini memastikan bahwa semua file dan sumber daya
+ * yang diperlukan dapat diakses dengan benar dari direktori root proyek.
  */
 chdir($_SERVER['DAPUR_ROOT'] ?? dirname(__DIR__));
 
@@ -21,7 +23,7 @@ chdir($_SERVER['DAPUR_ROOT'] ?? dirname(__DIR__));
  * Memuat autoloader yang dihasilkan oleh Composer untuk mengelola dependensi 
  * dan autoloading kelas.
  */
-require getcwd() . '/vendor/autoload.php';
+require '/vendor/autoload.php';
 
 (function() {
     /** 

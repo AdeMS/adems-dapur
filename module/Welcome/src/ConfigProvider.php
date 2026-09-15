@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dapur;
+namespace Welcome;
 
 class ConfigProvider
 {
@@ -30,7 +30,7 @@ class ConfigProvider
                 
             ],
             'factories'  => [
-                Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
+                Handler\WelcomePageHandler::class => Handler\WelcomePageHandlerFactory::class,
             ],
         ];
     }
@@ -42,8 +42,8 @@ class ConfigProvider
     {
         return [
             'paths' => [
-                'dapur'  => [dirname(__DIR__) . '/templates/dapur'],
-                'error'  => [dirname(__DIR__) . '/templates/error'],
+                'welcome'        => [dirname(__DIR__) . '/templates/welcome'],
+                'error'          => [dirname(__DIR__) . '/templates/error'],
                 'layout' => [dirname(__DIR__) . '/templates/layout'],
             ],
         ];

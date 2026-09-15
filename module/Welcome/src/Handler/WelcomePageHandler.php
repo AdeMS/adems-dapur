@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dapur\Handler;
+namespace Welcome\Handler;
 
 use Laminas\Diactoros\Response\HtmlResponse;
 use Mezzio\Template\TemplateRendererInterface;
@@ -10,7 +10,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-final class HomePageHandler implements RequestHandlerInterface
+final class WelcomePageHandler implements RequestHandlerInterface
 {
     public function __construct(
         private TemplateRendererInterface $template
@@ -21,8 +21,15 @@ final class HomePageHandler implements RequestHandlerInterface
     
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
+        $params = [];
+        $layout = dirname(__DIR__, 2) . '/templates/layout/default.phtml';
+
+        if (is_file($layout)) {
+            $params['layout'] = 'welcome-layout::default';
+        }
+
         return new HtmlResponse($this->template->render(
-            'dapur::home-page'
+            'welcome::welcome-page'
         ));
     }
 }
