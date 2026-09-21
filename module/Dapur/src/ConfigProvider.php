@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Welcome;
+namespace Dapur;
 
 class ConfigProvider
 {

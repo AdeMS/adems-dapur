@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Welcome\Handler;
+namespace Dapur\Handler;
 
 use Laminas\Diactoros\Response\HtmlResponse;
 use Mezzio\Template\TemplateRendererInterface;

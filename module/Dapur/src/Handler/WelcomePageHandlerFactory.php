@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Welcome\Handler;
+namespace Dapur\Handler;
 
 use Mezzio\Template\TemplateRendererInterface;
 use Psr\Container\ContainerInterface;
