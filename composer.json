@@ -41,7 +41,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Welcome\\": "module/Welcome/src/"
+            "Dapur\\": "module/Dapur/src/"
         }
     },
     "scripts": {
