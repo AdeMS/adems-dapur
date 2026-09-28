@@ -66,5 +66,6 @@
             "php -r 'if (is_dir(\"public/asset/bootstrap/font\")) unlink(\"public/asset/bootstrap/font\");'",
             "cp -R vendor/twbs/bootstrap-icons/font public/asset/bootstrap/font"
         ]
-    }
+    },
+    "minimum-stability": "dev"
 }
