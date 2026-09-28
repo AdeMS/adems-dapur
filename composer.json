@@ -59,12 +59,12 @@
           "php -S 0.0.0.0:8080 -t public/"
         ],
         "setup-bootstrap": [
-            "php -r 'if (is_dir(\"public/asset/bootstrap\")) unlink(\"public/asset/bootstrap\");'",
+            "php -r 'if (is_dir(\"data/asset/bootstrap\")) unlink(\"data/asset/bootstrap\");'",
             "cp -R vendor/twbs/bootstrap/dist public/asset/bootstrap"
         ],
         "setup-bootstrap-icons": [
-            "php -r 'if (is_dir(\"public/asset/bootstrap/font\")) unlink(\"public/asset/bootstrap/font\");'",
-            "cp -R vendor/twbs/bootstrap-icons/font public/asset/bootstrap/font"
+            "php -r 'if (is_dir(\"data/asset/bootstrap/font\")) unlink(\"data/asset/bootstrap/font\");'",
+            "cp -R vendor/twbs/bootstrap-icons/font data/asset/bootstrap/font"
         ]
     },
     "minimum-stability": "dev"
