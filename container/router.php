@@ -57,12 +57,13 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
 
     $routes = require $globalRouteFile;
     $selectedRoutes = require $selectedRouteFile;
+    $packageRoutes = $container->get('config')['routes'] ?? [];
 
-    if (! is_array($routes) || ! is_array($selectedRoutes)) {
+    if (! is_array($routes) || ! is_array($selectedRoutes) || ! is_array($packageRoutes)) {
         throw new RuntimeException('File konfigurasi route harus mengembalikan array.');
     }
 
-    foreach (array_merge($routes, $selectedRoutes) as $route) {
+    foreach (array_merge($packageRoutes, $routes, $selectedRoutes) as $route) {
         $app->route(
             $route['path'],
             $route['middleware'],
