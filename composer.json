@@ -60,7 +60,7 @@
         ],
         "setup-bootstrap": [
             "php -r 'if (is_dir(\"data/asset/bootstrap\")) unlink(\"data/asset/bootstrap\");'",
-            "cp -R vendor/twbs/bootstrap/dist public/asset/bootstrap"
+            "cp -R vendor/twbs/bootstrap/dist data/asset/bootstrap"
         ],
         "setup-bootstrap-icons": [
             "php -r 'if (is_dir(\"data/asset/bootstrap/font\")) unlink(\"data/asset/bootstrap/font\");'",
