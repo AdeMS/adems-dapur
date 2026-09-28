@@ -36,6 +36,7 @@
         "mezzio/mezzio-helpers": "^5.20",
         "mezzio/mezzio-laminasrouter": "^3.9.0",
         "mezzio/mezzio-laminasviewrenderer": "^2.15",
+        "adems/adems-asset": "^0.1",
         "twbs/bootstrap": "^5.3",
         "twbs/bootstrap-icons": "^1.13.1"
     },
